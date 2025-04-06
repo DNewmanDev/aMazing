@@ -1,5 +1,6 @@
 from tkinter import Tk,BOTH, Canvas
-from graphics import Window, Cell
+from graphics import Window
+from cell import Cell
 def main():
     win = Window(800,600)
     c1 = Cell(win)
