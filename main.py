@@ -1,10 +1,26 @@
 from tkinter import Tk,BOTH, Canvas
-from graphics import Window, Line, Point
+from graphics import Window, Cell
 def main():
     win = Window(800,600)
-    l = Line(Point(25,30), Point(444,666))
-    win.draw_line(l,"black")
-    win.draw_line(Line(Point(10,20), Point(10,600)),"black")
+    c = Cell(win)
+    c.has_left_wall = False
+    c.draw(300, 300, 400, 400)
+
+    c = Cell(win)
+    c.has_left_wall = False
+    c.draw(25, 25, 120, 120)
+
+    c = Cell(win)
+    c.has_right_wall = False
+    c.draw(125, 125, 200, 200)
+
+    c = Cell(win)
+    c.has_bottom_wall = False
+    c.draw(225, 225, 250, 250)
+
+    c = Cell(win)
+    c.has_top_wall = False
+    c.draw(300, 300, 500, 500)
     win.wait_for_close()
 
 
