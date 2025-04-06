@@ -63,6 +63,10 @@ class Cell:
     #TOP RIGHT TO BOTTOM RIGHT x2, y1 to x2, y2
 
     def draw(self, x1,y1,x2,y2 ):
+        if self._win is None:
+            return
+        if x1 >= x2 or y1 >=y2: #gaurd logic to make sure draw move function works
+            raise ValueError('Invalid cell boundaries')
         self._x1 = x1
         self._x2 = x2
         self._y1 = y1
@@ -80,3 +84,17 @@ class Cell:
             line = Line(Point(x1, y2), Point(x2, y2))
             self._win.draw_line(line)
 
+    def get_center(self): #for draw_move
+        return ((self._x1 + self._x2) / 2, (self._y1 + self._y2) / 2)
+
+    def draw_move(self, to_cell, undo=False): #GAURD AGAINST INVALID INPUT
+        if any(value is None for value in [self._x1, self._x2, self._y1, self._y2, 
+                                   to_cell._x1, to_cell._x2, to_cell._y1, to_cell._y2]):
+            raise ValueError("Invalid cell or target cell boundaries.")
+        self_centerx, self_centery = self.get_center()
+        to_cell_centerx, to_cell_centery = to_cell.get_center()
+        line = Line(Point(self_centerx, self_centery), Point(to_cell_centerx, to_cell_centery))
+        if undo==True:
+            self._win.draw_line(line, fill_color="grey")
+        else: 
+            self._win.draw_line(line, fill_color="red")
