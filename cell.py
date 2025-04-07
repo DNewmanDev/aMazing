@@ -1,6 +1,6 @@
 from graphics import Line, Point
 class Cell:
-    def __init__(self, win=None): 
+    def __init__(self, win=None, visisted = None): 
         self.has_left_wall = True
         self.has_right_wall = True
         self.has_top_wall = True
@@ -10,6 +10,7 @@ class Cell:
         self._y1 = None
         self._y2 = None
         self._win = win
+        self.visited = False
    
    
     # TOP LEFT TO TOP RIGHT x1,y1 TO x2, y1
@@ -65,3 +66,7 @@ class Cell:
             self._win.draw_line(line, fill_color="grey")
         else: 
             self._win.draw_line(line, fill_color="red")
+
+
+
+
