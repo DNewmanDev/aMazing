@@ -14,13 +14,15 @@ class Maze:
 
       
         self._create_cells()
-        
+        self._break_entrance_and_exit()
 
     def _create_cells(self):
      
    # cell logic for this would be x1, x1 + cell_sizex1, ect w y
         for i in range (self._num_cols):
             topcol = []
+            if self._num_rows == 0:
+                raise ValueError('no rows here')
             for j in range (self._num_rows):
                 topcol.append(Cell(self._win))
             self._cells.append(topcol)
@@ -53,4 +55,11 @@ class Maze:
         if self is None:
             return
         self._win.redraw()
-        time.sleep(0.05)
+        time.sleep(0.005)
+
+    def _break_entrance_and_exit(self):
+        self._cells[0][0].has_top_wall = False
+        self._draw_cell(0,0)
+
+        self._cells[self._num_cols-1][self._num_rows-1].has_bottom_wall = False
+        self._draw_cell(self._num_cols-1,self._num_rows-1)
