@@ -28,16 +28,18 @@ This advanced Python application uses recursive backtracking to generate random 
 - **Grid-Based Representation**: 2D matrix of cell objects with wall state management
 - **State Management**: Tracks visited cells and wall configurations throughout algorithms
 
+### Object-Oriented Design
+- **Cell-Based Architecture**: Each maze cell encapsulates wall states and drawing logic
+- **Graphics Abstraction**: Window, Point, and Line classes for rendering management
+- **Modular Components**: Separate concerns for maze logic, graphics, and algorithm execution
+
+
 ### Graphics System
 - **Custom Tkinter Wrapper**: Object-oriented graphics abstraction layer
 - **Coordinate System**: Point and line rendering with proper scaling
 - **Animation Framework**: Timed rendering updates with configurable delays
 - **Visual Feedback**: Color-coded paths (red for solution, grey for backtracking)
 
-### Object-Oriented Design
-- **Cell-Based Architecture**: Each maze cell encapsulates wall states and drawing logic
-- **Graphics Abstraction**: Window, Point, and Line classes for rendering management
-- **Modular Components**: Separate concerns for maze logic, graphics, and algorithm execution
 
 ## 💻 Technologies Used
 
