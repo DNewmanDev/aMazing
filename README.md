@@ -1,4 +1,4 @@
-# aMazing - Algorithmic Maze Generation & Visualization #
+# aMazing - Algorithmic Maze Generation & Solution Visualization #
 
 This advanced Python application uses recursive backtracking to generate random mazes and depth-first searching to solve them. Features real-time Tkinter visualization and step-by-step algorithm animation.
 
