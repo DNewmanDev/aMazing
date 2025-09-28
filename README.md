@@ -9,6 +9,16 @@ This advanced Python application uses recursive backtracking to generate random 
 - **Real-Time Visualization**: Tkinter-based GUI with smooth animation and color-coded paths
 - **Algorithm Animation**: Step-by-step visualization of both generation and solving processes
 - **Interactive Graphics**: Custom graphics engine with coordinate system management
+  
+## 🎯 Skills Demonstrated
+
+- **Algorithm Implementation**: Classic CS algorithms (backtracking, DFS) with proper recursion
+- **Data Structures**: 2D arrays, grid navigation, and state management
+- **Object-Oriented Design**: Clean class hierarchies and encapsulation
+- **GUI Programming**: Event-driven interfaces with real-time updates
+- **Recursive Programming**: Deep understanding of recursive problem-solving patterns
+- **Testing**: Unit test coverage for algorithm correctness
+- **Mathematical Modeling**: Coordinate systems and geometric calculations
 
 ## 🏗️ Technical Architecture
 
@@ -33,8 +43,7 @@ This advanced Python application uses recursive backtracking to generate random 
 
 - **Python 3.8+**: Modern Python with object-oriented programming
 - **Tkinter**: Native GUI framework for cross-platform visualization
-- **Recursive Algorithms**: Classic computer science algorithms implementation
-- **Unit Testing**: Comprehensive test coverage for maze generation logic
+
 
 ## 🔧 Technical Highlights
 
@@ -76,25 +85,7 @@ def _solve_r(self, i, j):
         self._draw_move(current_cell, next_cell, undo=True)
 ```
 
-### Graphics Abstraction Layer
-```python
-class Cell:
-    def draw(self, win):
-        """Render cell walls with proper coordinate scaling"""
-        if self.has_left_wall:
-            win.draw_line(Line(Point(x1, y1), Point(x1, y2)))
-        # Conditional wall rendering based on state
-```
 
-## 🎯 Skills Demonstrated
-
-- **Algorithm Implementation**: Classic CS algorithms (backtracking, DFS) with proper recursion
-- **Data Structures**: 2D arrays, grid navigation, and state management
-- **Object-Oriented Design**: Clean class hierarchies and encapsulation
-- **GUI Programming**: Event-driven interfaces with real-time updates
-- **Recursive Programming**: Deep understanding of recursive problem-solving patterns
-- **Testing**: Unit test coverage for algorithm correctness
-- **Mathematical Modeling**: Coordinate systems and geometric calculations
 
 ## 🚀 Getting Started
 
@@ -105,7 +96,7 @@ class Cell:
 ### Installation & Running
 ```bash
 # Clone the repository
-git clone https://github.com/DonJNewman/MazeSolver.git
+git clone https://github.com/DNewmanDev/aMazing.git
 cd mazesolver
 
 # Run the maze generator and solver
@@ -125,19 +116,6 @@ win = Window(1200, 1000)
 maze = Maze(50, 50, 18, 20, 40, 40, win)
 ```
 
-## 🔍 Algorithm Visualization
-
-This application provides real-time visualization of:
-
-1. **Maze Generation Phase**:
-   - Walls being removed as the algorithm carves paths
-   - Current cell highlighting during traversal
-   - Step-by-step progression through the grid
-
-2. **Maze Solving Phase**:
-   - Red lines showing the solution path
-   - Grey lines indicating backtracking moves
-   - Final solution highlighted when complete
 
 ## 🏗️ Project Structure
 
