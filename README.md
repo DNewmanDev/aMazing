@@ -99,7 +99,7 @@ def _solve_r(self, i, j):
 ```bash
 # Clone the repository
 git clone https://github.com/DNewmanDev/aMazing.git
-cd mazesolver
+cd amazing
 
 # Run the maze generator and solver
 python3 main.py
