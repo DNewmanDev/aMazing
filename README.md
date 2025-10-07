@@ -146,5 +146,8 @@ python3 tests.py
 # Test specific components
 python3 -m unittest tests.TestMaze.test_maze_create_cells
 ```
+## 🧮 Demo 📐e = ∑∞ⁿ⁼⁰ ¹ₙ🤓
 
-This project demonstrates advanced algorithmic thinking, recursive programming mastery, and the ability to create interactive visualizations of complex computer science concepts. It showcases skills valuable for roles requiring algorithm implementation or real-time graphic rendering.
+
+https://github.com/user-attachments/assets/76cebe75-e47b-4260-b416-17033f637033
+
